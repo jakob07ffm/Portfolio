@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+table {
+    width: 100%;
+    height: 70vh;
+    color: white;
+    background-color: rgb(30, 30, 30);
+}
+td {
+    width: 25%;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(20, 20, 20);
+}
+
+td:hover {
+    background-color: rgb(30, 30, 30);
+    cursor: pointer;
+}
+
+#resultArea {
+    height: 30vh;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    font-size: 64px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 24px;
+    box-sizing: border-box;
+    
+}
+
+#gleich {
+    background-color: yellow;
+}
+
+#gleich:hover {
+   background-color: rgb(168, 171, 11);
+}
+
+.highlight {
+    background-color: black;
+}

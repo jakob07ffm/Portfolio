@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Formulareingaben &uuml;berpr&uuml;fen</title>
+<script type="text/javascript">
+<!--
+function chkFormular()
+{
+ if(document.Formular.User.value == "")  {
+   alert("Bitte Ihren Namen eingeben!");
+   document.Formular.User.focus();
+   return false;
+  }
+ if(document.Formular.Ort.value == "") {
+   alert("Bitte Ihren Wohnort eingeben!");
+   document.Formular.Ort.focus();
+   return false;
+  }
+ if(document.Formular.Mail.value == "") {
+   alert("Bitte Ihre E-Mail-Adresse eingeben!");
+   document.Formular.Mail.focus();
+   return false;
+  }
+ if(document.Formular.Mail.value.indexOf('@') == -1) {
+   alert("Keine E-Mail-Adresse!");
+   document.Formular.Mail.focus();
+   return false;
+  }
+ if(document.Formular.Alter.value == "") {
+   alert("Bitte Ihr Alter eingeben!");
+   document.Formular.Alter.focus();
+   return false;
+  }
+ var chkZ = 1;
+ for(i=0;i<document.Formular.Alter.value.length;++i)
+   if(document.Formular.Alter.value.charAt(i) < "0"
+   || document.Formular.Alter.value.charAt(i) > "9")
+     chkZ = -1;
+ if(chkZ == -1) {
+   alert("Altersangabe keine Zahl!");
+   document.Formular.Alter.focus();
+   return false;
+  }
+}
+//-->
+</script>
+</head>
+<body bgcolor="#EEEEEE" text="#000000">
+
+<h1>Formular</h1>
+
+<form name="Formular" action="http://selfaktuell.teamone.de/cgi-bin/formview.pl" method="post" onSubmit="return chkFormular()">
+<pre>
+Name:     <input type="text" size="40" name="User">
+Wohnort:  <input type="text" size="40" name="Ort">
+E-Mail:   <input type="text" size="40" name="Mail">
+Alter:    <input type="text" size="40" name="Alter">
+Formular: <input type="submit" value="Absenden"><input type="reset" value="Abbrechen">
+
+Zum Absenden muss eine Internetverbindung bestehen!
+</pre>
+</form>
+
+</body>
+</html>

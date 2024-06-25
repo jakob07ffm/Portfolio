@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>externes JavaScript in HTML einbinden</title>
+</head>
+  <body>
+  <script language="JavaScript">
+   var ergebnistext=prompt("Wie heißen Sie?","");
+   if(ergebnistext==""||ergebnistext==null)
+      history.back();
+   else
+      alert("Hallo, "+ergebnistext); 
+      document.location="Hallo World.html";
+
+    localStorage.setItem('shoppingItems', ergebnistext);
+
+   // console.log(ergebnistext)
+</script>
+    
+
+</body>
+</html> 

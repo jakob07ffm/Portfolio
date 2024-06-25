@@ -1,0 +1,56 @@
+<!Doctype html>
+<html>
+<head>
+<title>Meldungsfenster</title>
+</head>	
+<body>
+
+
+<h1>Beispiel 5</h1>
+Name:
+<input type="text" id="fname" readonly="readonly" onclick="getFrontName5()" />
+
+
+<input type="button" value="Abbrechen" onclick= "myReset5"/>
+<input id =" absenden" type="button" value="Senden" onclick="mySend5()" />
+Punkte:
+
+<script>
+	var x =localStorage.getItem('score')
+	document.write(x)
+function getFrontName5() {
+	var fname = prompt("Geben Sie hier Ihren Vornamen ein:");
+	if (fname != "null") {
+		document.getElementById("fname").value = fname;
+	}
+}
+
+function myReset5() {
+	document.getElementById("fname").value = "";
+	document.location="Menü Hub.html";
+}
+//function mySend5() {
+//	var fname = document.getElementById("fname").value;
+//	if (fname != "") {
+//		if (confirm("Wollen Sie wirklich senden?")) {
+  //          localStorage.setItem('shoppingItems', fname+""+x);
+			
+function mySend5(){
+    var new_data= document.getElementById('fname').value +localStorage.getItem('score');
+    if(localStorage.getItem('data') == null){
+      localStorage.setItem('data','[]');
+    }
+    var old_data = JSON.parse(localStorage.getItem('data'));
+    old_data.push(new_data);
+    
+
+    localStorage.setItem('data', JSON.stringify(old_data));
+document.location="html.html"
+    }
+  
+</script> 
+
+
+
+</body>
+</html>

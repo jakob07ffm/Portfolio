@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>externes JavaScript in HTML einbinden</title>
+</head>
+  <body>
+      <div style="width: 100%; height: 60px; margin-top: 240px;">
+    <h1 id="output" style=" text-align: center;">TYPES OF SPORTS</h1>
+<input id="input" placeholder="Basketball, Baseball and etc" style="margin-left: 540px; width: 12.5%;"/>
+<button onclick="save();"> Save </button>
+<button onclick="view();"> View </button>
+</div>
+  </body>
+<script language="JavaScript">
+      function save(){
+    var new_data= document.getElementById('input').value; 
+    if(localStorage.getItem('data') == null){
+      localStorage.setItem('data','[]');
+    }
+    var old_data = JSON.parse(localStorage.getItem('data'));
+    old_data.push(new_data);
+    
+
+    localStorage.setItem('data', JSON.stringify(old_data));
+    }
+    function view(){
+        if(localStorage.getItem('data')!= null){
+            document.getElementById('output'). innerHTML=JSON.parse(localStorage.getItem('data'))
+        }
+    } 
+
+    </script>
+    
+
+</body>
+</html> 

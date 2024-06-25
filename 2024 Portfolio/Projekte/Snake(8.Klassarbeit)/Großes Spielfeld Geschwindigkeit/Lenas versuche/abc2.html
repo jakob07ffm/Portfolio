@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>externes JavaScript in HTML einbinden</title>
+</head>
+  <body>
+  <script language="JavaScript">
+   var ergebnistext=prompt("Wie heißen Sie?","");
+   if(ergebnistext==""||ergebnistext==null)
+      history.back();
+   else
+      alert("Hallo, "+ergebnistext);
+
+  function save(){
+    var new_data= ergebnistext; 
+      if(localStorage.getItem('Name') == null){
+        localStorage.setItem('Name','[]');
+        }
+    
+    var old_data = JSON.parse(localStorage.getItem('Name'));
+    
+
+    old_data.push(new_data);
+    
+    localStorage.setItem('Name',JSON.stringify(old_data));
+
+  }
+  localStorage.setItem('Name', ergebnistext);
+
+  document.write(new_data);
+
+  document.write(old_data);
+  
+  console.log(ergebnistext)
+</script>
+    
+
+</body>
+</html> 

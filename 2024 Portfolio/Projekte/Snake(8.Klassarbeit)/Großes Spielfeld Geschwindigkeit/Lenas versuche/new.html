@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>externes JavaScript in HTML einbinden</title>
+</head>
+<body>
+   <ul id="list"> 
+    </ul>
+<script language="JavaScript">
+      
+      
+      let shoppingItems= [];
+
+      let ergebnistext= localStorage.getItem('shoppingItems');
+      if (ergebnistext==null){
+        
+        ergebnistext= [];
+      } else {
+        ergebnistext= ergebnistext.split(',');
+      }
+      updateList()
+  console.log(shoppingItems)
+  function updateList(){
+    document.getElementById('list'). innerHTML='ergebnistext';
+    } 
+    shoppingItems.push(ergebnistext)
+ 
+  for(let index=0;index < shoppingItems.length;index +=1 ) {
+    document.getElementById('list').innerHTML+='<li>'+ shoppingItems[index]+ '</li>';
+  }
+</script>
+    
+
+</body>
+</html>

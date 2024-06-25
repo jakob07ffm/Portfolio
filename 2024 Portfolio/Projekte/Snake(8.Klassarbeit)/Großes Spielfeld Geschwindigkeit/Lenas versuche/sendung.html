@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>externes JavaScript in HTML einbinden</title>
+</head>
+<body>
+<script>
+function save(){
+var text_to_save=document.getElementById('textfield').value;
+localStorage.setItem("text", text_to_save); //save the item
+}
+</script>
+
+<form action="/" method="post" id="signup-form">
+    <input type="text" name="Username" placeholder="Full Name">
+    <input type="email" name="EmailAddress" placeholder="Email Address">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

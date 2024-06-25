@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>externes JavaScript in HTML einbinden</title>
+</head>
+<body>
+  <script language="JavaScript">
+    
+    var ergebnistext=prompt("Möchtest du dich in die Rangliste eintragen?","");
+      if(ergebnistext==""||ergebnistext==null)
+         history.back();
+   else     alert("Hallo, "+ ergebnistext);
+
+      function auswert()
+         {
+         if (document.form5.namensfeld.value=="Name?") alert("Faulheit wird bestraft werden!"); 
+         else alert("Ja " + document.form5.namensfeld.value + "!");
+         }
+   </script>
+    
+  
+</body>
+</html>
+
+
+

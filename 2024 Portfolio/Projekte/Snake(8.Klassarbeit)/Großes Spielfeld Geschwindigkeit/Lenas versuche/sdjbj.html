@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Test</title>
+    <script>
+      function Hinzufuegen () {
+        NeuerEintrag = new Option(document.Testform.neu.value, document.Testform.neu.value, false, true);
+        document.Testform.Auswahl.options[document.Testform.Auswahl.length] = NeuerEintrag;
+        document.Testform.neu.value = "";
+      }
+    </script>
+  </head>
+  <body>
+   <form name="Testform" action="">
+      <select name="Auswahl" size="8">
+        <option>Ein Eintrag</option>
+      </select>
+      <br>
+      <input type="text" name="neu">
+      <input type="button" value="Hinzu" onclick="Hinzufuegen()">
+    </form>
+  </body>
+</html>

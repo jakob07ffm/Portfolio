@@ -45,10 +45,25 @@ h1 {
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .pic {
     margin-top: 20px;
     width: 100%; 
     height: auto; 
+}
+
+.about {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.about_me {
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    justify-content: left;
+    align-items: center;    
 }

@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'custom_font';
+    src: url('fonts/SpaceGrotesk-Regular.ttf');
+}
+    
+body {
+    font-family: "custom_font";
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: #E9C46A;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    font-size: 300px;
+    justify-content: left;
+    align-items: center;    
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.repo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.repo-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.repo-item:hover {
+    transform: scale(1.05);
+}
+
+.repo-item h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.repo-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.repo-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.repo-item a:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="repo_style.css">
+</head>
+<body>
+    <header>
+        <p class="header">Jakob<br>Sütfels*</p>
+    </header>
+
+    <main>
+        <h1>PROJECTS:</h1>
+        <div id="repo-list" class="repo-container"></div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        const username = "jakob07ffm";
+        const token = "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";
+
+        async function fetchRepos() {
+            const response = await fetch(`https://api.github.com/users/${username}/repos`, {
+                headers: {
+                    "Authorization": `token ${token}`
+                }
+            });
+            const repos = await response.json();
+            const repoList = document.getElementById('repo-list');
+            repos.forEach(repo => {
+                const repoItem = document.createElement('div');
+                repoItem.classList.add('repo-item');
+                
+                const repoName = document.createElement('h2');
+                repoName.textContent = repo.name;
+                
+                const repoDescription = document.createElement('p');
+                repoDescription.textContent = repo.description || 'No description provided';
+                
+                const repoLink = document.createElement('a');
+                repoLink.href = repo.html_url;
+                repoLink.textContent = 'View Repository';
+                repoLink.target = '_blank';
+                
+                repoItem.appendChild(repoName);
+                repoItem.appendChild(repoDescription);
+                repoItem.appendChild(repoLink);
+                
+                repoList.appendChild(repoItem);
+            });
+        }
+
+        fetchRepos();
+    </script>
+</body>
+</html>

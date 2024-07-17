@@ -43,12 +43,12 @@
 
     <script>
         const username = "jakob07ffm";
-        const token = "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";
+        const token = "";
 
         async function fetchRepos() {
             const response = await fetch(`https://api.github.com/users/jakob07ffm/repos`, {
                 headers: {
-                    "Authorization": `token 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`
+                    "Authorization": `token //`
                 }
             });
             const repos = await response.json();

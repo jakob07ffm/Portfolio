@@ -11,12 +11,35 @@
         <p class="header">Jakob<br>Sütfels*</p>
     </header>
 
+    <div>
+        <h1>ABOUT ME:</h1>
+        <div class="about_me">
+            Hi! I'm Jakob Sütfels, a 16-year-old from Frankfurt, Germany. Welcome to my portfolio website!
+                    
+            I'm into a lot of different things. I love running and playing soccer—they keep me active and are a lot of fun. When I'm not outside, I'm probably working on coding projects or tinkering with something related to engineering. I really enjoy figuring out how things work and building new stuff.
+                    
+            Thanks for stopping by my site. Feel free to check out my projects and get in touch if you want to know more or just chat!
+        </div>
+    </div>
+
     <main>
         <h1>PROJECTS:</h1>
         <div id="repo-list" class="repo-container"></div>
     </main>
 
+    <div class="contact">
+        <h1>CONTACT ME:</h1>
+            <form action="https://formspree.io/f/manwnvgv" method="POST">
+            <input type="email" name="email" placeholder="Email address" autocomplete="off" required>
+            <textarea rows="5" cols="50" name="massage" placeholder="Enter text" autocomplete="off" required></textarea>
+            <button type="submit">Send massage</button>
+        </form>
+    </div>
+
     <footer>
+        <a href="https://github.com/jakob07ffm">GitHub</a>
+        <a href="https://www.instagram.com/jakobs229/">Instagram</a>
+        <a href="https://jakob-hl.itch.io/">Itch</a>
     </footer>
 
     <script>
@@ -24,9 +47,9 @@
         const token = "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";
 
         async function fetchRepos() {
-            const response = await fetch(`https://api.github.com/users/${username}/repos`, {
+            const response = await fetch(`https://api.github.com/users/jakob07ffm/repos`, {
                 headers: {
-                    "Authorization": `token ${token}`
+                    "Authorization": `token .....`
                 }
             });
             const repos = await response.json();

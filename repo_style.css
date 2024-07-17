@@ -2,7 +2,7 @@
     font-family: 'custom_font';
     src: url('fonts/SpaceGrotesk-Regular.ttf');
 }
-    
+
 body {
     font-family: "custom_font";
     margin: 0;
@@ -81,8 +81,60 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
-    position: fixed;
     width: 100%;
-    bottom: 0;
 }
 
+.about_me {
+    margin: 40px;
+    text-align: center;
+}
+
+.contact {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact input[type="email"],
+.contact textarea {
+    width: calc(100% - 40px);
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact input[type="email"]:focus,
+.contact textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.contact button[type="submit"] {
+    padding: 15px 30px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+a {
+    color: #ddd;
+}
